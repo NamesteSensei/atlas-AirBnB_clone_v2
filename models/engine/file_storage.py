@@ -1,13 +1,28 @@
 #!/usr/bin/python3
-"""FileStorage class for storage management in JSON format"""
-
+"""FileStorage class for managing JSON storage."""
 import json
+from models.state import State
+from models.city import City
+# Other imports as needed
 
 class FileStorage:
-    """Handles long-term storage of all class instances in JSON format"""
+    """Handles storage of all class instances with JSON files."""
 
-    # other methods like all(), new(), save(), reload() go here
+    __file_path = "file.json"
+    __objects = {}
+
+    def all(self, cls=None):
+        # Return dictionary of objects by class or all objects if cls is None
+
+    def new(self, obj):
+        # Add object to storage dictionary
+
+    def save(self):
+        # Serialize __objects to JSON file
+
+    def reload(self):
+        # Deserialize JSON file to __objects
 
     def close(self):
-        """Deserializes the JSON file to objects"""
+        """Deserializes the JSON file to objects."""
         self.reload()
